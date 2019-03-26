@@ -18,5 +18,14 @@ double calc_velocity(Stellar* object, Stellar* center) {
 	//Perfect orbit -> Centripetal force = Gravitational force
 	float velocity = sqrt((G * center->get_mass() / radius));
 
-	return velocity; 
+	return velocity;
+}
+
+void linear_system_solver(); 
+
+//Circle equation for stellar object to circle center object
+void circle_equation(Stellar* center, Stellar* object) {
+	double center_point[2] = { center->get_x(), center->get_y() }; 
+
+	//Solve (x - centerx)^2 + (y - centery)^2 = object->get_astrounits() * AU; 
 }
