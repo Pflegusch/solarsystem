@@ -96,4 +96,10 @@ public:
 	void set_y(double y_) {
 		this->y = y_;
 	}
+
+	//Calculate the distance of two stellar objects in the 2D plane
+	double get_distance(Stellar* other) {
+		double distance = sqrt(pow((other->x - this->x), 2) + pow((other->y - this->y), 2)); 
+		return distance; 
+	}
 };

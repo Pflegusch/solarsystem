@@ -21,6 +21,9 @@
     <ClInclude Include="stellar_object.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="physics.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
