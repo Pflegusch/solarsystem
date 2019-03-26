@@ -24,6 +24,9 @@
     <ClInclude Include="physics.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="graphics.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">

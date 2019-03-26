@@ -151,6 +151,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="graphics.h" />
     <ClInclude Include="physics.h" />
     <ClInclude Include="stellar_object.h" />
     <ClInclude Include="pch.h" />
