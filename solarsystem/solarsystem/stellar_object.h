@@ -15,7 +15,7 @@ class Stellar {
 	double x, y;
 
 	//Counter for default constructor
-	static int counter;
+	static int counter; 
 
 	//Default constructor: Create Earth-like object
 public:
@@ -27,7 +27,9 @@ public:
 		, velocity(0)
 		, x(0)
 		, y(0)
-	{}
+	{
+		counter++; 
+	}
 
 	//Constructor
 	Stellar(string name_, double mass_, double astro_unit_, double diameter_,
