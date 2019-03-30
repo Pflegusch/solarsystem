@@ -41,7 +41,9 @@ public:
 		, velocity(velocity_)
 		, x(x_)
 		, y(y_)
-	{}
+	{
+		counter++; 
+	}
 
 	//Getter
 	string get_name() {
