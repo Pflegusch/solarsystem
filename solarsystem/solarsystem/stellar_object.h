@@ -7,12 +7,12 @@
 using namespace std;
 
 class Stellar {
-	//Physical properties in m, kg, m/s; 
+	//Physical properties in kg, m, m/s; 
 	const string name;
 	double mass, astro_unit, diameter, velocity = 0;
 
-	//Coordinates (x,y) in 2D plane 
-	double x, y;
+	//Coordinates (x,y,z) in 3D plane, set z=0 for 2D
+	double x, y, z; 
 
 	//Counter for how many objects are created
 	static int counter; 
@@ -27,13 +27,14 @@ public:
 		, velocity(0)
 		, x(0)
 		, y(0)
+		, z(0)
 	{
 		counter++; 
 	}
 
 	//Constructor
 	Stellar(string name_, double mass_, double astro_unit_, double diameter_,
-		double velocity_ = 0, double x_ = 0, double y_ = 0)
+		double velocity_ = 0, double x_ = 0, double y_ = 0, double z_ = 0)
 		: name(name_)
 		, mass(mass_)
 		, astro_unit(astro_unit_)
@@ -41,6 +42,7 @@ public:
 		, velocity(velocity_)
 		, x(x_)
 		, y(y_)
+		, z(z_)
 	{
 		counter++; 
 	}
@@ -100,8 +102,13 @@ public:
 	}
 
 	//Calculate the distance of two stellar objects in the 2D plane
-	double get_distance(Stellar* other) {
-		double distance = sqrt(pow((other->x - this->x), 2) + pow((other->y - this->y), 2)); 
-		return distance; 
+	double get_distance_2d(Stellar* other) {
+		if (this->z == other->z) {
+			double distance = sqrt(pow((other->x - this->x), 2) + pow((other->y - this->y), 2));
+			return distance;
+		}
+		else return -1; 
 	}
+
+	//TODO: Calculate distance of two stellar objects in the 3D plane
 };
