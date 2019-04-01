@@ -14,7 +14,7 @@ class Stellar {
 	//Coordinates (x,y) in 2D plane 
 	double x, y;
 
-	//Counter for default constructor
+	//Counter for how many objects are created
 	static int counter; 
 
 	//Default constructor: Create Earth-like object
