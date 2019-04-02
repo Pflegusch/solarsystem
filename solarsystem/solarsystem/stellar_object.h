@@ -116,7 +116,6 @@ public:
 		return distance; 
 	}
 
-	//Calculate velocity depending on keplers laws
 	double calculate_velocity() {
 		return 0; 
 	}
