@@ -115,8 +115,4 @@ public:
 		double distance = sqrt(pow((other->x - this->x), 2) + pow((other->y - this->y), 2) + pow((other->z - this->z), 2)); 
 		return distance; 
 	}
-
-	double calculate_velocity() {
-		return 0; 
-	}
 };
