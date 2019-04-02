@@ -110,5 +110,9 @@ public:
 		else return -1; 
 	}
 
-	//TODO: Calculate distance of two stellar objects in the 3D plane
+	//Calculate distance of two stellar objects in the 3D plane
+	double get_distance_3d(Stellar* other) {
+		double distance = sqrt(pow((other->x - this->x), 2) + pow((other->y - this->y), 2) + pow((other->z - this->z), 2)); 
+		return distance; 
+	}
 };
